@@ -1,0 +1,205 @@
+:root {
+  --lesb-1: #d52d00;
+  --lesb-2: #ef7627;
+  --lesb-3: #ff9a56;
+  --lesb-4: #fff1e6;
+  --lesb-5: #d162a4;
+  --lesb-6: #b55690;
+  --lesb-7: #a30262;
+  --text-dark: #7a1c3a;
+}
+
+.dark {
+  --lesb-4: #2a0f1c;
+  --text-dark: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Centralização na página */
+body {
+  min-height: 100vh;
+  background: var(--lesb-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 30px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Topo e Menu */
+.top {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.top h1 {
+  color: var(--lesb-6);
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.menu button {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.menu button:nth-child(1) {
+  background: var(--lesb-2);
+}
+.menu button:nth-child(2) {
+  background: var(--lesb-3);
+}
+.menu button:nth-child(3) {
+  background: var(--lesb-5);
+}
+.menu button:nth-child(4) {
+  background: var(--lesb-7);
+}
+
+/* Telas */
+.screen {
+  display: none;
+  width: 100%;
+}
+.screen.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Timer */
+#timer {
+  font-size: 100px;
+  font-weight: 800;
+  color: var(--lesb-1);
+  line-height: 1;
+}
+
+/* Input da Tarefa Principal (ex: 'Digite algo') */
+.task-input {
+  border: none;
+  border-bottom: 2px solid var(--lesb-3);
+  padding: 8px;
+  width: 85%;
+  text-align: center;
+  outline: none;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+/* --- AJUSTE DA PALAVRA 'FOCO' --- */
+/* Certifique-se de que a palavra 'foco' esteja dentro de uma classe .next ou similar no HTML */
+.next {
+  color: var(--text-dark);
+  font-size: 1rem; /* Proporcional ao timer */
+  font-weight: 600; /* Levemente negrito para destaque */
+  width: 100%;
+  text-align: center; /* Centraliza a palavra */
+  margin: 10px 0; /* Espaço em volta */
+}
+
+.next strong {
+  color: var(--lesb-6);
+  font-weight: 700;
+}
+
+/* Botões Principais */
+.play,
+#saveConfig {
+  padding: 15px 60px;
+  border: none;
+  border-radius: 15px;
+  background: var(--lesb-5);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+/* --- AJUSTE DAS CONFIGURAÇÕES --- */
+
+#configScreen h3 {
+  margin-bottom: 25px; /* Mais espaço para o título */
+  color: #000;
+  font-size: 1.5rem;
+}
+
+/* Cada par de Label + Input */
+.config-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Mais espaço entre label e input */
+  width: 100%;
+  margin-bottom: 20px; /* Espaço entre os blocos de configuração */
+}
+
+.config-group label {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* --- NOVO DESIGN DO INPUT --- */
+.config-group input {
+  width: 100%;
+  max-width: 180px; /* Largura proporcional */
+  padding: 10px;
+
+  /* Remove o design de caixa antiga */
+  background-color: #f7f3ef; /* Cor de fundo muito suave, puxada para o corpo */
+  border: none; /* Remove bordas */
+  border-bottom: 3px solid transparent; /* Cria espaço para a borda animada */
+  border-radius: 12px; /* Cantos arredondados e macios */
+
+  text-align: center;
+  font-size: 1.2rem; /* Fonte maior para o número */
+  font-weight: bold;
+  color: var(--lesb-6); /* Número na cor do Chronos */
+
+  transition: all 0.2s ease; /* Transição suave no foco */
+  outline: none; /* Remove o outline do navegador */
+}
+
+/* Efeito de Foco "dahora" */
+.config-group input:focus {
+  background-color: #fff; /* Fica branco puro */
+  box-shadow: 0 5px 15px rgba(209, 98, 164, 0.1); /* Sombra suave rosa */
+  border-bottom: 3px solid var(--lesb-5); /* Linha rosa embaixo */
+}
+
+/* Histórico */
+#historyList {
+  width: 100%;
+  list-style: none;
+  margin-top: 15px;
+}
