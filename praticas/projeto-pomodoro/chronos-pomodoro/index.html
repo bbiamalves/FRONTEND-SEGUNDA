@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chronos</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <circle cx='50' cy='50' r='45' fill='%23d162a4'/>
+    <line x1='50' y1='50' x2='50' y2='25' stroke='white' stroke-width='6'/>
+    <line x1='50' y1='50' x2='70' y2='50' stroke='white' stroke-width='6'/>
+  </svg>"
+    />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="top">
+        <h1>Chronos</h1>
+
+        <nav class="menu">
+          <button id="homeBtn">⌂</button>
+          <button id="historyBtn">↺</button>
+          <button id="configBtn">⚙</button>
+          <button id="themeBtn">◐</button>
+        </nav>
+      </header>
+
+      <section class="center active" id="timerScreen">
+        <time id="timer">25:00</time>
+
+        <input id="taskInput" class="task-input" placeholder="Digite algo" />
+
+        <p class="next">
+          Próximo ciclo: <strong id="nextCycle">descanso</strong>
+        </p>
+
+        <button class="play" id="playBtn">Iniciar</button>
+      </section>
+
+      <section class="screen" id="configScreen">
+        <h2>Configurações</h2>
+
+        <label>Foco</label>
+        <input id="focusInput" type="number" value="25" />
+
+        <label>Descanso curto</label>
+        <input id="shortInput" type="number" value="5" />
+
+        <label>Descanso longo</label>
+        <input id="longInput" type="number" value="15" />
+
+        <button id="saveConfig">Salvar</button>
+      </section>
+
+      <section class="screen" id="historyScreen">
+        <h2>Histórico</h2>
+        <ul id="historyList"></ul>
+      </section>
+    </main>
+
+    <audio
+      id="alarm"
+      src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"
+    ></audio>
+
+    <!-- SCRIPT SEMPRE NO FINAL -->
+    <script src="script.js"></script>
+  </body>
+</html>
