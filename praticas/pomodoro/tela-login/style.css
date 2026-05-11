@@ -1,0 +1,217 @@
+:root {
+  --lesb-1: #d52d00;
+  --lesb-2: #ef7627;
+  --lesb-3: #ff9a56;
+  --lesb-4: #fff1e6;
+  --lesb-5: #d162a4;
+  --lesb-6: #d665ab;
+  --lesb-7: #a30262;
+  --text-dark: #7a1c3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--lesb-4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+
+  background: white;
+  border-radius: 30px;
+
+  padding: 40px 30px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 22px;
+
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    var(--lesb-2),
+    var(--lesb-6)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.login-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.login-title h2 {
+  color: var(--lesb-6);
+  font-size: 2rem;
+}
+
+.login-title p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.login-form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.input-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.input-group label {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  max-width: 260px;
+
+  padding: 10px 14px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #f7f3ef;
+
+  font-size: 0.95rem;
+  text-align: center;
+
+  outline: none;
+
+  transition: 0.2s ease;
+  color: var(--text-dark);
+}
+
+.input-group input:focus {
+  background: white;
+
+  border-bottom: 3px solid var(--lesb-5);
+
+  box-shadow: 0 5px 15px rgba(209, 98, 164, 0.15);
+}
+
+.login-options {
+  width: 100%;
+  max-width: 260px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.85rem;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--text-dark);
+}
+
+.forgot {
+  color: var(--lesb-7);
+
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-btn {
+  width: 100%;
+  max-width: 260px;
+
+  padding: 13px;
+
+  border: none;
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    var(--lesb-2),
+    var(--lesb-5)
+  );
+
+  color: white;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 20px rgba(213, 45, 0, 0.15);
+}
+
+.register {
+  color: var(--text-dark);
+  font-size: 0.92rem;
+}
+
+.register a {
+  color: var(--lesb-6);
+
+  text-decoration: none;
+  font-weight: bold;
+}
